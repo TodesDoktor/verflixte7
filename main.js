@@ -1,17 +1,35 @@
 let min = 1
 let max = 6
+let wurf1 , wurf2
+
+let container = document.getElementById ("ausgabe" )
 
 
 
- console.log(Würfel1()+"+"+Würfel2()+"=" )
+function wuerfel1()  {
+    return Math.floor((Math.random()*(max-min)) + min)
+}
 
-
-    function Würfel1()  {
+function wuerfel2()  {
 
     return Math.floor((Math.random()*(max-min)) + min)
 }
 
-function Würfel2()  {
+function ergebnis (){
+    wurf1 = wuerfel1()
+    wurf2 = wuerfel2()
+    return wurf1 + wurf2
 
-    return Math.floor((Math.random()*(max-min)) + min)
+
+
 }
+
+function wuerfeln() {
+
+    console.log("dein Gesamterggebnis beträgt " + ergebnis())
+
+
+}
+
+
+
